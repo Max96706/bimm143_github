@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Andres Sandoval">
+
+<title>Class 17: Mini Vaccination Project</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="class17_files/libs/clipboard/clipboard.min.js"></script>
+<script src="class17_files/libs/quarto-html/quarto.js"></script>
+<script src="class17_files/libs/quarto-html/popper.min.js"></script>
+<script src="class17_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="class17_files/libs/quarto-html/anchor.min.js"></script>
+<link href="class17_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="class17_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="class17_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="class17_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="class17_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Class 17: Mini Vaccination Project</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Andres Sandoval </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="getting-started" class="level1">
+<h1>Getting Started</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>vax <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"covid19vaccinesbyzipcode_test.csv"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(vax)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  as_of_date zip_code_tabulation_area local_health_jurisdiction    county
+1 2021-01-05                    95446                    Sonoma    Sonoma
+2 2021-01-05                    96014                  Siskiyou  Siskiyou
+3 2021-01-05                    96087                    Shasta    Shasta
+4 2021-01-05                    96008                    Shasta    Shasta
+5 2021-01-05                    95410                 Mendocino Mendocino
+6 2021-01-05                    95527                   Trinity   Trinity
+  vaccine_equity_metric_quartile                 vem_source
+1                              2 Healthy Places Index Score
+2                              2    CDPH-Derived ZCTA Score
+3                              2    CDPH-Derived ZCTA Score
+4                             NA            No VEM Assigned
+5                              3    CDPH-Derived ZCTA Score
+6                              2    CDPH-Derived ZCTA Score
+  age12_plus_population age5_plus_population tot_population
+1                4840.7                 5057           5168
+2                 135.0                  135            135
+3                 513.9                  544            544
+4                1125.3                 1164             NA
+5                 926.3                  988            997
+6                 476.6                  485            499
+  persons_fully_vaccinated persons_partially_vaccinated
+1                       NA                           NA
+2                       NA                           NA
+3                       NA                           NA
+4                       NA                           NA
+5                       NA                           NA
+6                       NA                           NA
+  percent_of_population_fully_vaccinated
+1                                     NA
+2                                     NA
+3                                     NA
+4                                     NA
+5                                     NA
+6                                     NA
+  percent_of_population_partially_vaccinated
+1                                         NA
+2                                         NA
+3                                         NA
+4                                         NA
+5                                         NA
+6                                         NA
+  percent_of_population_with_1_plus_dose booster_recip_count
+1                                     NA                  NA
+2                                     NA                  NA
+3                                     NA                  NA
+4                                     NA                  NA
+5                                     NA                  NA
+6                                     NA                  NA
+  bivalent_dose_recip_count eligible_recipient_count
+1                        NA                        0
+2                        NA                        0
+3                        NA                        2
+4                        NA                        2
+5                        NA                        0
+6                        NA                        0
+                                                               redacted
+1 Information redacted in accordance with CA state privacy requirements
+2 Information redacted in accordance with CA state privacy requirements
+3 Information redacted in accordance with CA state privacy requirements
+4 Information redacted in accordance with CA state privacy requirements
+5 Information redacted in accordance with CA state privacy requirements
+6 Information redacted in accordance with CA state privacy requirements</code></pre>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>Q1. What column details the total number of people fully vaccinated?</p>
+</blockquote>
+<p>vax$persons_fully_vaccinated</p>
+<blockquote class="blockquote">
+<p>Q2. What column details the Zip code tabulation area?</p>
+</blockquote>
+<p>vax$zip_code_tabulation_area</p>
+<blockquote class="blockquote">
+<p>Q3. What is the earliest date in this dataset?</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">sort</span>(vax<span class="sc">$</span>as_of_date),<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2021-01-05"</code></pre>
+</div>
+</div>
+<p>January 5th, 2021</p>
+<blockquote class="blockquote">
+<p>Q4. What is the latest date in this dataset?</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">sort</span>(vax<span class="sc">$</span>as_of_date, <span class="at">decreasing =</span> <span class="cn">TRUE</span>),<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2023-02-28"</code></pre>
+</div>
+</div>
+<p>February 28th, 2023</p>
+<p>We can use the <code>skim()</code> function for a quick overview of the data like this.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Don't need to call whole library do this one function </span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Do this to complete the one function from skimr package </span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>skimr<span class="sc">::</span><span class="fu">skim</span>(vax)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<caption>Data summary</caption>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Name</td>
+<td style="text-align: left;">vax</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Number of rows</td>
+<td style="text-align: left;">199332</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Number of columns</td>
+<td style="text-align: left;">18</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">_______________________</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Column type frequency:</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">13</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">________________________</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Group variables</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: character</strong></p>
+<table class="table table-sm table-striped">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 11%">
+<col style="width: 16%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 7%">
+<col style="width: 10%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">skim_variable</th>
+<th style="text-align: right;">n_missing</th>
+<th style="text-align: right;">complete_rate</th>
+<th style="text-align: right;">min</th>
+<th style="text-align: right;">max</th>
+<th style="text-align: right;">empty</th>
+<th style="text-align: right;">n_unique</th>
+<th style="text-align: right;">whitespace</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">as_of_date</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">113</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">local_health_jurisdiction</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">565</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">county</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">565</td>
+<td style="text-align: right;">59</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">vem_source</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">redacted</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">69</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: numeric</strong></p>
+<table class="table table-sm table-striped">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 7%">
+<col style="width: 10%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 4%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 4%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">skim_variable</th>
+<th style="text-align: right;">n_missing</th>
+<th style="text-align: right;">complete_rate</th>
+<th style="text-align: right;">mean</th>
+<th style="text-align: right;">sd</th>
+<th style="text-align: right;">p0</th>
+<th style="text-align: right;">p25</th>
+<th style="text-align: right;">p50</th>
+<th style="text-align: right;">p75</th>
+<th style="text-align: right;">p100</th>
+<th style="text-align: left;">hist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">zip_code_tabulation_area</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">93665.11</td>
+<td style="text-align: right;">1817.38</td>
+<td style="text-align: right;">90001</td>
+<td style="text-align: right;">92257.75</td>
+<td style="text-align: right;">93658.50</td>
+<td style="text-align: right;">95380.50</td>
+<td style="text-align: right;">97635.0</td>
+<td style="text-align: left;">▃▅▅▇▁</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">vaccine_equity_metric_quartile</td>
+<td style="text-align: right;">9831</td>
+<td style="text-align: right;">0.95</td>
+<td style="text-align: right;">2.44</td>
+<td style="text-align: right;">1.11</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">2.00</td>
+<td style="text-align: right;">3.00</td>
+<td style="text-align: right;">4.0</td>
+<td style="text-align: left;">▇▇▁▇▇</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">age12_plus_population</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">18895.04</td>
+<td style="text-align: right;">18993.87</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1346.95</td>
+<td style="text-align: right;">13685.10</td>
+<td style="text-align: right;">31756.12</td>
+<td style="text-align: right;">88556.7</td>
+<td style="text-align: left;">▇▃▂▁▁</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">age5_plus_population</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">20875.24</td>
+<td style="text-align: right;">21105.97</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1460.50</td>
+<td style="text-align: right;">15364.00</td>
+<td style="text-align: right;">34877.00</td>
+<td style="text-align: right;">101902.0</td>
+<td style="text-align: left;">▇▃▂▁▁</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">tot_population</td>
+<td style="text-align: right;">9718</td>
+<td style="text-align: right;">0.95</td>
+<td style="text-align: right;">23372.77</td>
+<td style="text-align: right;">22628.51</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">2126.00</td>
+<td style="text-align: right;">18714.00</td>
+<td style="text-align: right;">38168.00</td>
+<td style="text-align: right;">111165.0</td>
+<td style="text-align: left;">▇▅▂▁▁</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">persons_fully_vaccinated</td>
+<td style="text-align: right;">16525</td>
+<td style="text-align: right;">0.92</td>
+<td style="text-align: right;">13962.33</td>
+<td style="text-align: right;">15054.09</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">930.00</td>
+<td style="text-align: right;">8566.00</td>
+<td style="text-align: right;">23302.00</td>
+<td style="text-align: right;">87566.0</td>
+<td style="text-align: left;">▇▃▁▁▁</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">persons_partially_vaccinated</td>
+<td style="text-align: right;">16525</td>
+<td style="text-align: right;">0.92</td>
+<td style="text-align: right;">1701.64</td>
+<td style="text-align: right;">2030.18</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">165.00</td>
+<td style="text-align: right;">1196.00</td>
+<td style="text-align: right;">2535.00</td>
+<td style="text-align: right;">39913.0</td>
+<td style="text-align: left;">▇▁▁▁▁</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">percent_of_population_fully_vaccinated</td>
+<td style="text-align: right;">20825</td>
+<td style="text-align: right;">0.90</td>
+<td style="text-align: right;">0.57</td>
+<td style="text-align: right;">0.25</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.42</td>
+<td style="text-align: right;">0.60</td>
+<td style="text-align: right;">0.74</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: left;">▂▃▆▇▃</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">percent_of_population_partially_vaccinated</td>
+<td style="text-align: right;">20825</td>
+<td style="text-align: right;">0.90</td>
+<td style="text-align: right;">0.08</td>
+<td style="text-align: right;">0.09</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: right;">0.06</td>
+<td style="text-align: right;">0.08</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: left;">▇▁▁▁▁</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">percent_of_population_with_1_plus_dose</td>
+<td style="text-align: right;">21859</td>
+<td style="text-align: right;">0.89</td>
+<td style="text-align: right;">0.63</td>
+<td style="text-align: right;">0.24</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.49</td>
+<td style="text-align: right;">0.67</td>
+<td style="text-align: right;">0.81</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: left;">▂▂▅▇▆</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">booster_recip_count</td>
+<td style="text-align: right;">72872</td>
+<td style="text-align: right;">0.63</td>
+<td style="text-align: right;">5837.31</td>
+<td style="text-align: right;">7165.81</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">297.00</td>
+<td style="text-align: right;">2748.00</td>
+<td style="text-align: right;">9438.25</td>
+<td style="text-align: right;">59553.0</td>
+<td style="text-align: left;">▇▂▁▁▁</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">bivalent_dose_recip_count</td>
+<td style="text-align: right;">158664</td>
+<td style="text-align: right;">0.20</td>
+<td style="text-align: right;">2924.93</td>
+<td style="text-align: right;">3583.45</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">190.00</td>
+<td style="text-align: right;">1418.00</td>
+<td style="text-align: right;">4626.25</td>
+<td style="text-align: right;">27458.0</td>
+<td style="text-align: left;">▇▂▁▁▁</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">eligible_recipient_count</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">12801.84</td>
+<td style="text-align: right;">14908.33</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">504.00</td>
+<td style="text-align: right;">6338.00</td>
+<td style="text-align: right;">21973.00</td>
+<td style="text-align: right;">87234.0</td>
+<td style="text-align: left;">▇▃▁▁▁</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>Q5. How many numeric columns are in this dataset?</p>
+</blockquote>
+<p>13</p>
+<blockquote class="blockquote">
+<p>Q6. Note that there are “missing values” in the dataset. How many NA values there in the persons_fully_vaccinated column?</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>n.missing <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(vax<span class="sc">$</span>persons_fully_vaccinated))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<blockquote class="blockquote">
+<p>Q7. What percent of persons_fully_vaccinated values are missing (to 2 significant figures)?</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">sum</span>(<span class="fu">is.na</span>(vax<span class="sc">$</span>persons_fully_vaccinated)) <span class="sc">/</span> <span class="fu">length</span>(vax<span class="sc">$</span>persons_fully_vaccinated) <span class="sc">*</span><span class="dv">100</span>, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 8.29</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># or...</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co">#round(n.missing / nrow(vax) *100, 2)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<blockquote class="blockquote">
+<p>Q8. [Optional]: Why might this data be missing?</p>
+</blockquote>
+<p>Some areas do not report their data, such as military bases. Military bases don’t report their values to the database and therefore they are missing, even if the military is indeed highly mandated for vaccination.</p>
+</section>
+<section id="working-with-dates" class="level1">
+<h1>Working with dates</h1>
+<p>First install and load the “lubridate” package. The lubridate package makes working with dates and times in R much less of a pain. Let’s have a first play with this package here.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'lubridate'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">today</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2023-03-07"</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This will give an Error!</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co">#today() - vax$as_of_date[1]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This gives an error because the dates within the vax data frame are not read as dates, but a character string. WE need to specify that we are using the year-month-day format.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Specify that we are using the year-month-day format</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>vax<span class="sc">$</span>as_of_date <span class="ot">&lt;-</span> <span class="fu">ymd</span>(vax<span class="sc">$</span>as_of_date)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We can now magically do math with the dates.</p>
+<blockquote class="blockquote">
+<p>Q. How old am I in dates?</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">today</span>() <span class="sc">-</span> <span class="fu">ymd</span>(<span class="st">"2001-03-29"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Time difference of 8013 days</code></pre>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>How many days have passed since the first vaccination reported in this dataset?</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">today</span>() <span class="sc">-</span> vax<span class="sc">$</span>as_of_date[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Time difference of 791 days</code></pre>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>Using the last and the first date value we can now determine how many days the dataset span?</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>vax<span class="sc">$</span>as_of_date[<span class="fu">nrow</span>(vax)] <span class="sc">-</span> vax<span class="sc">$</span>as_of_date[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Time difference of 784 days</code></pre>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>Q9. How many days have passed since the last update of the dataset?</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">today</span>() <span class="sc">-</span> vax<span class="sc">$</span>as_of_date[<span class="fu">nrow</span>(vax)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Time difference of 7 days</code></pre>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>Q10. How many unique dates are in the dataset (i.e.&nbsp;how many different dates are detailed)?</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>dplyr <span class="sc">::</span> <span class="fu">n_distinct</span>(vax<span class="sc">$</span>as_of_date)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 113</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># or...</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="co">#length(unique(vax$as_of_date))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>As of today there are a 113 different dates in this data set.</p>
+</section>
+<section id="working-with-zip-codes" class="level1">
+<h1>Working with ZIP codes</h1>
+<p>One of the numeric columns in the data set (namely vax$zip_code_tabulation_area) are actually ZIP codes - a postal code used by the United States Postal Service (USPS). In R we can use the <code>zipcodeR</code> package to make working with these codes easier.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(zipcodeR)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">geocode_zip</span>( <span class="st">'96706'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+  zipcode   lat   lng
+  &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;
+1 96706    21.3 -158.</code></pre>
+</div>
+</div>
+<p>Calculate the distance between the centroids of any two ZIP codes in miles</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">zip_distance</span>(<span class="st">'85379'</span>,<span class="st">'92109'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  zipcode_a zipcode_b distance
+1     85379     92109   286.89</code></pre>
+</div>
+</div>
+<p>More usefully, we can pull census data about ZIP code areas (including median household income etc.)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">reverse_zipcode</span>(<span class="fu">c</span>(<span class="st">'92122'</span>, <span class="st">'85379'</span>, <span class="st">'96706'</span>, <span class="st">'94112'</span>) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 24
+  zipcode zipcode_…¹ major…² post_…³ common_c…⁴ county state   lat   lng timez…⁵
+  &lt;chr&gt;   &lt;chr&gt;      &lt;chr&gt;   &lt;chr&gt;       &lt;blob&gt; &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  
+1 85379   Standard   Surpri… Surpri… &lt;raw 30 B&gt; Maric… AZ     33.6 -112. Americ…
+2 92122   Standard   San Di… San Di… &lt;raw 21 B&gt; San D… CA     32.9 -117. Pacific
+3 94112   Standard   San Fr… San Fr… &lt;raw 25 B&gt; San F… CA     37.7 -122. Pacific
+4 96706   Standard   Ewa Be… Ewa Be… &lt;raw 21 B&gt; Honol… HI     21.3 -158. Pacifi…
+# … with 14 more variables: radius_in_miles &lt;dbl&gt;, area_code_list &lt;blob&gt;,
+#   population &lt;int&gt;, population_density &lt;dbl&gt;, land_area_in_sqmi &lt;dbl&gt;,
+#   water_area_in_sqmi &lt;dbl&gt;, housing_units &lt;int&gt;,
+#   occupied_housing_units &lt;int&gt;, median_home_value &lt;int&gt;,
+#   median_household_income &lt;int&gt;, bounds_west &lt;dbl&gt;, bounds_east &lt;dbl&gt;,
+#   bounds_north &lt;dbl&gt;, bounds_south &lt;dbl&gt;, and abbreviated variable names
+#   ¹​zipcode_type, ²​major_city, ³​post_office_city, ⁴​common_city_list, …</code></pre>
+</div>
+</div>
+<p>We can use this reverse_zipcode() to pull census data later on for any or all ZIP code areas we might be interested in.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pull data for all ZIP codes in the dataset</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="co">#zipdata &lt;- reverse_zipcode( vax$zip_code_tabulation_area )</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="focus-on-the-san-diego-area" class="level1">
+<h1>Focus on the San Diego area</h1>
+<p>Let’s now focus in on the San Diego County area by restricting ourselves first to vax$county == “San Diego” entries. We have two main choices on how to do this. The first using base R the second using the dplyr package:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Subset to San Diego county only areas</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>sd <span class="ot">&lt;-</span> vax[ vax<span class="sc">$</span>county <span class="sc">==</span> <span class="st">"San Diego"</span> , ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>sd <span class="ot">&lt;-</span> <span class="fu">filter</span>(vax, county <span class="sc">==</span> <span class="st">"San Diego"</span>)</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(sd)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 12091</code></pre>
+</div>
+</div>
+<p>Using dplyr is often more convenient when we are subsetting across multiple criteria - for example all San Diego county areas with a population of over 10,000.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>sd<span class="fl">.10</span> <span class="ot">&lt;-</span><span class="fu">filter</span>(vax, county <span class="sc">==</span> <span class="st">"San Diego"</span> <span class="sc">&amp;</span> age5_plus_population <span class="sc">&gt;</span> <span class="dv">10000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<blockquote class="blockquote">
+<p>Q11. How many distinct zip codes are listed for San Diego County?</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">n_distinct</span>(sd<span class="sc">$</span>zip_code_tabulation_area)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 107</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co">#length(unique(sd$zip_code_tabulation_area))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>There are 107 different zipcodes in San Diego.</p>
+<blockquote class="blockquote">
+<p>Q12. What San Diego County Zip code area has the largest 12 + Population in this dataset?</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this will spit out the row of the max age 12 population</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="co">#which.max(sd$age12_plus_population)</span></span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="co"># now use the row number to find the zip code</span></span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>sd<span class="sc">$</span>zip_code_tabulation_area[<span class="fu">which.max</span>(sd<span class="sc">$</span>age12_plus_population)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 92154</code></pre>
+</div>
+</div>
+<p>Zip Code 92154 has the largest 12+ population.</p>
+<blockquote class="blockquote">
+<p>Q13. What is the overall average “Percent of Population Fully Vaccinated” value for all San Diego “County” as of “2023-02-28”?</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">filter</span>(sd, as_of_date <span class="sc">&gt;=</span> <span class="st">"2023-02-28"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">mean</span>(x<span class="sc">$</span>percent_of_population_fully_vaccinated, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">*</span><span class="dv">100</span>, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 74.01</code></pre>
+</div>
+</div>
+<p>The overall percent is 74.01%</p>
+<blockquote class="blockquote">
+<p>Q14. Using either ggplot or base R graphics make a summary figure that shows the distribution of Percent of Population Fully Vaccinated values as of “2023-02-28”?</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(x,  <span class="fu">aes</span>(percent_of_population_fully_vaccinated)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">color=</span> <span class="st">"White"</span>, <span class="at">fill =</span> <span class="st">"black"</span>, <span class="at">na.rm=</span> <span class="cn">TRUE</span>, <span class="at">bins =</span> <span class="dv">10</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Histogram of Vaccination Rates Across San Diego, CA as of 2023-02-28"</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"Percent of Population Fully Vaccinated"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"Count (Zip Code Areas)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="class17_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="focus-on-ucsdla-jolla" class="level1">
+<h1>Focus on UCSD/La Jolla</h1>
+<p>UC San Diego resides in the 92037 ZIP code area and is listed with an age 5+ population size of 36,144.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>ucsd <span class="ot">&lt;-</span> <span class="fu">filter</span>(sd, zip_code_tabulation_area<span class="sc">==</span><span class="st">"92037"</span>)</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>ucsd[<span class="dv">1</span>,]<span class="sc">$</span>age5_plus_population</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 36144</code></pre>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>Q15. Using ggplot make a graph of the vaccination rate time course for the 92037 ZIP code area:</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(ucsd) <span class="sc">+</span></span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(as_of_date, percent_of_population_fully_vaccinated) <span class="sc">+</span></span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">group=</span><span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span> <span class="st">"Vaccination Rate for La Jolla, 92037"</span> , <span class="at">x=</span> <span class="st">"Date"</span>, <span class="at">y=</span><span class="st">"Percent Vaccinated"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="class17_files/figure-html/unnamed-chunk-31-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="comparing-to-similar-sized-areas" class="level1">
+<h1>Comparing to similar sized areas</h1>
+<p>Let’s return to the full dataset and look across every zip code area with a population at least as large as that of 92037 on as_of_date “2023-02-28”.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Subset to all CA areas with a population as large as 92037</span></span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>vax<span class="fl">.36</span> <span class="ot">&lt;-</span> <span class="fu">filter</span>(vax, age5_plus_population <span class="sc">&gt;</span> <span class="dv">36144</span> <span class="sc">&amp;</span></span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>                as_of_date <span class="sc">==</span> <span class="st">"2023-02-28"</span>)</span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(vax<span class="fl">.36</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  as_of_date zip_code_tabulation_area local_health_jurisdiction      county
+1 2023-02-28                    93257                    Tulare      Tulare
+2 2023-02-28                    93535               Los Angeles Los Angeles
+3 2023-02-28                    91367               Los Angeles Los Angeles
+4 2023-02-28                    90025               Los Angeles Los Angeles
+5 2023-02-28                    90024               Los Angeles Los Angeles
+6 2023-02-28                    90031               Los Angeles Los Angeles
+  vaccine_equity_metric_quartile                 vem_source
+1                              1 Healthy Places Index Score
+2                              1 Healthy Places Index Score
+3                              3 Healthy Places Index Score
+4                              4 Healthy Places Index Score
+5                              3 Healthy Places Index Score
+6                              1 Healthy Places Index Score
+  age12_plus_population age5_plus_population tot_population
+1               61519.8                70784          76519
+2               59042.7                68471          74264
+3               40437.4                43398          45970
+4               42803.2                44982          46883
+5               48841.8                50198          51627
+6               34503.3                37735          39916
+  persons_fully_vaccinated persons_partially_vaccinated
+1                    45104                         5629
+2                    45338                         4907
+3                    33648                         2948
+4                    36156                         4530
+5                    28005                         5788
+6                    29270                         3186
+  percent_of_population_fully_vaccinated
+1                               0.589448
+2                               0.610498
+3                               0.731956
+4                               0.771196
+5                               0.542449
+6                               0.733290
+  percent_of_population_partially_vaccinated
+1                                   0.073563
+2                                   0.066075
+3                                   0.064129
+4                                   0.096624
+5                                   0.112112
+6                                   0.079818
+  percent_of_population_with_1_plus_dose booster_recip_count
+1                               0.663011               22106
+2                               0.676573               21799
+3                               0.796085               22052
+4                               0.867820               25207
+5                               0.654561               19239
+6                               0.813108               17344
+  bivalent_dose_recip_count eligible_recipient_count redacted
+1                      4981                    45046       No
+2                      6754                    45247       No
+3                      9234                    33544       No
+4                     12099                    35980       No
+5                      8578                    27934       No
+6                      6076                    29213       No</code></pre>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>Q16. Calculate the mean “Percent of Population Fully Vaccinated” for ZIP code areas with a population as large as 92037 (La Jolla) as_of_date “2023-02-28”. Add this as a straight horizontal line to your plot from above with the geom_hline() function?</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">mean</span>(vax<span class="fl">.36</span><span class="sc">$</span>percent_of_population_fully_vaccinated)</span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.7213331</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(ucsd) <span class="sc">+</span></span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(as_of_date, percent_of_population_fully_vaccinated) <span class="sc">+</span></span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">group=</span><span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb62-6"><a href="#cb62-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span> <span class="st">"Vaccination Rate for La Jolla, 92037"</span> , <span class="at">x=</span> <span class="st">"Date"</span>, <span class="at">y=</span><span class="st">"Percent Vaccinated"</span>) <span class="sc">+</span> <span class="fu">geom_hline</span>(<span class="at">yintercept=</span>y, <span class="at">col=</span> <span class="st">"red"</span>, <span class="at">linetype =</span> <span class="dv">11</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="class17_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>Q17. What is the 6 number summary (Min, 1st Qu., Median, Mean, 3rd Qu., and Max) of the “Percent of Population Fully Vaccinated” values for ZIP code areas with a population as large as 92037 (La Jolla) as_of_date “2023-02-28”?</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(vax<span class="fl">.36</span><span class="sc">$</span>percent_of_population_fully_vaccinated)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 0.3804  0.6457  0.7181  0.7213  0.7907  1.0000 </code></pre>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>Q18. Using ggplot generate a histogram of this data.</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(vax<span class="fl">.36</span>) <span class="sc">+</span><span class="fu">aes</span>(percent_of_population_fully_vaccinated) <span class="sc">+</span><span class="fu">geom_histogram</span>(<span class="at">col=</span> <span class="st">"white"</span>, <span class="at">fill =</span> <span class="st">"Black"</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="dv">0</span>,<span class="dv">1</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="class17_files/figure-html/unnamed-chunk-36-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>Q19. Is the 92109 and 92040 ZIP code areas above or below the average value you calculated for all these above?</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">filter</span>(vax<span class="fl">.36</span>, zip_code_tabulation_area <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"92109"</span>, <span class="st">"92040"</span>))</span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a>z<span class="sc">$</span>percent_of_population_fully_vaccinated</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.694572 0.550296</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="co">#or...</span></span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="co">#y &gt;= vax %&gt;% filter(as_of_date == "2023-02-28") %&gt;% </span></span>
+<span id="cb69-3"><a href="#cb69-3" aria-hidden="true" tabindex="-1"></a><span class="co">#filter(zip_code_tabulation_area=="92040") %&gt;% </span></span>
+<span id="cb69-4"><a href="#cb69-4" aria-hidden="true" tabindex="-1"></a><span class="co">#select(percent_of_population_fully_vaccinated)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The values are below the average.</p>
+<blockquote class="blockquote">
+<p>Q20. Finally make a time course plot of vaccination progress for all areas in the full dataset with a age5_plus_population &gt; 36144.</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>vax.<span class="fl">36.</span>all <span class="ot">&lt;-</span> <span class="fu">filter</span>(vax, age5_plus_population <span class="sc">&gt;</span> <span class="dv">36144</span>)</span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-4"><a href="#cb70-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(vax.<span class="fl">36.</span>all) <span class="sc">+</span></span>
+<span id="cb70-5"><a href="#cb70-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(as_of_date,</span>
+<span id="cb70-6"><a href="#cb70-6" aria-hidden="true" tabindex="-1"></a>      percent_of_population_fully_vaccinated, </span>
+<span id="cb70-7"><a href="#cb70-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">group=</span>zip_code_tabulation_area) <span class="sc">+</span></span>
+<span id="cb70-8"><a href="#cb70-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">alpha=</span><span class="fl">0.2</span>, <span class="at">color=</span><span class="st">"Blue"</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
+<span id="cb70-9"><a href="#cb70-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>,<span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb70-10"><a href="#cb70-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">"Date"</span>, <span class="at">y=</span><span class="st">"Percent Vaccinated"</span>,</span>
+<span id="cb70-11"><a href="#cb70-11" aria-hidden="true" tabindex="-1"></a>       <span class="at">title=</span><span class="st">"Vaccination Rate Across California"</span>,</span>
+<span id="cb70-12"><a href="#cb70-12" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle=</span><span class="st">"Only areas with population above 36k are shown"</span>) <span class="sc">+</span></span>
+<span id="cb70-13"><a href="#cb70-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> y, <span class="at">linetype=</span> <span class="dv">11</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="class17_files/figure-html/unnamed-chunk-38-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>Q21. How do you feel about traveling for Thanksgiving Break and meeting for in-person class afterwards?</p>
+</blockquote>
+<p>Feelin Good</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
