@@ -339,3 +339,4 @@ ggplot(vax.36.all) +
 >Q21. How do you feel about traveling for Thanksgiving Break and meeting for in-person class afterwards?
 
 Feelin Good. 
+
