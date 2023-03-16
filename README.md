@@ -12,8 +12,6 @@ My Classwork from [BIMM143](https://bioboot.github.io/bimm143_W23/) at UC San Di
 - Class 11: [Genome Informatics](https://github.com/Max96706/bimm143_github/blob/main/class11/class11lab.md)
 - Class 12: [Transcriptomics and the Analysis of RNA-Seq Data](https://github.com/Max96706/bimm143_github/blob/main/class12/class12lab.md)
 - Class 13: [RNA-Seq Analysis Mini Project](https://github.com/Max96706/bimm143_github/blob/main/class13/class13lab.md)
-- Class 14: [Hands-on with Git and GitHub]
-- Class 15: [Essential UNIX for Bioinformatics: AWS]
-- Class 16: [Analyzing Sequencing Data in the Cloud: AWS]
+- Class 16: [Analyzing Sequencing Data in the Cloud: AWS Work and R Studio graphs](https://github.com/Max96706/bimm143_github/blob/main/class16%2012.09.55%20PM/class16.md)
 - Class 17: [Mini Vaccination Project](https://github.com/Max96706/bimm143_github/blob/main/class17/class17.md)
-- Class 19: [Mini Project: Investigating Pertussis Resurgence]
+- Class 19: [Mini Project: Investigating Pertussis Resurgence](https://github.com/Max96706/bimm143_github/blob/main/class19/class19.md)
