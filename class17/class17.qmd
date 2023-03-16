@@ -1,7 +1,7 @@
 ---
 title: "Class 17: Mini Vaccination Project"
 author: "Andres Sandoval"
-format: html
+format: gfm
 ---
 
 # Getting Started 
