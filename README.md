@@ -8,4 +8,4 @@ My Classwork from [BIMM143](https://bioboot.github.io/bimm143_W23/) at UC San Di
 - Class 7: 
 - Class 8: 
 - Class 9: 
-- Class 10: [Mini "Halloween" Project](https://github.com/Max96706/bimm143_github/blob/main/class17/class17.md)
+- Class 17: [Mini Vaccination Project](https://github.com/Max96706/bimm143_github/blob/main/class17/class17.md)
