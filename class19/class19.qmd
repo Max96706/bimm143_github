@@ -1,7 +1,7 @@
 ---
 title: "Class 19: Investigating Pertussis Resurgence"
 author: "Andres Sandoval"
-format: html
+format: gfm
 ---
 
 # 1. Investigating pertussis cases by year
