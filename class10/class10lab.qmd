@@ -1,7 +1,7 @@
 ---
 title: "Class 10: Mini Project"
 author: "Andres Sandoval"
-format: pdf
+format: gfm
 ---
 
 ## Importing Candy Data
