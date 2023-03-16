@@ -9,9 +9,9 @@ My Classwork from [BIMM143](https://bioboot.github.io/bimm143_W23/) at UC San Di
 - Class 8: [Breast Cancer PCA Analysis](https://github.com/Max96706/bimm143_github/blob/main/class08/class08lab.md)
 - Class 9: [Structural Bioinformatics (Focus on new AlphaFold2)](https://github.com/Max96706/bimm143_github/blob/main/class09/class09lab.md)
 - Class 10: ["Halloween" Mini Project](https://github.com/Max96706/bimm143_github/blob/main/class10/class10lab.md)
-- Class 11: [Genome Informatics]()
-- Class 12: [Transcriptomics and the Analysis of RNA-Seq Data]
-- Class 13: [RNA-Seq Analysis Mini Project]
+- Class 11: [Genome Informatics](https://github.com/Max96706/bimm143_github/blob/main/class11/class11lab.md)
+- Class 12: [Transcriptomics and the Analysis of RNA-Seq Data](https://github.com/Max96706/bimm143_github/blob/main/class12/class12lab.md)
+- Class 13: [RNA-Seq Analysis Mini Project](https://github.com/Max96706/bimm143_github/blob/main/class13/class13lab.md)
 - Class 14: [Hands-on with Git and GitHub]
 - Class 15: [Essential UNIX for Bioinformatics: AWS]
 - Class 16: [Analyzing Sequencing Data in the Cloud: AWS]
